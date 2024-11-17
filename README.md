@@ -5,3 +5,5 @@
 [Documentation is available here](https://github.com/elise-bigdevsoon/big-dev-soon-foodiego)
 
 <a href="./src/assets/big-dev-soon-foodiego.fig" download="big-dev-soon-foodiego.fig">Download the figma file for this project here</a>
+
+[Download the figma file for this project here](./src/assets/big-dev-soon-foodiego.fig)
