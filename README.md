@@ -6,4 +6,4 @@
 
 <a href="./src/assets/big-dev-soon-foodiego.fig" download="big-dev-soon-foodiego.fig">Download the figma file for this project here</a>
 
-[Download the figma file for this project here](https://github.com/rineliniguezsosa/FoodieGo/blob/master/src/assets/big-dev-soon-foodiego.fig)
+[Download the figma file for this project here](https://github.com/rineliniguezsosa/FoodieGo/master/src/assets/big-dev-soon-foodiego.fig)
