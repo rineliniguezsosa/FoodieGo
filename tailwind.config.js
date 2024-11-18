@@ -25,6 +25,12 @@ export default {
         green:'#0FA958',
         greendark:'#388E3C',
         black:'#000000',
+      },
+      screens:{
+        sm: "640px", // Dispositivos móviles grandes
+        md: "768px", // Tablets (iPad estándar, tablets Android)
+        lg: "1024px", // Laptops pequeñas 
+        xl: "1280px", // Laptops grandes y monitores pequeños
       }
     },
   },
