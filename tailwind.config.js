@@ -6,6 +6,13 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily:{
+        poppins: ['Poppins', 'sans-serif'], // Fuente principal
+      },
+      fontWeight:{
+        regular: '400', //regular
+        semibold: '600', //semibold
+      },
       colors: {
         white:'#FFFFFF',
         gray100:'#F8F8F8',
