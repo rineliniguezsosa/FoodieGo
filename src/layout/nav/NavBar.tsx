@@ -7,7 +7,7 @@ import { useState } from 'react';
 export const NavBar = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   return (
-    <header className="w-full border-2 border-red-400">
+    <header className="w-full border-2 border-red-400 bg-bluegray">
         <nav className="w-full px-4 py-2 justify-between items-center flex border-2 border-blue-400">
           <div>
             <h1>Foodie Go</h1>
