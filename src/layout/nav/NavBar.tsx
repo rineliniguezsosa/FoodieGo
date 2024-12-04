@@ -22,13 +22,15 @@ export const NavBar = () => {
           </div>
 
           
-          <IconButton>
+          <IconButton onClick={()=> setIsDrawerOpen(!isDrawerOpen)}>
               <MenuIcon></MenuIcon>
           </IconButton>
           
 
           <Drawer
             anchor='left'
+            open={isDrawerOpen}
+            onClose={()=> setIsDrawerOpen(false)}
           >
             <div>
               <span>Hola</span>
