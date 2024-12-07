@@ -12,8 +12,9 @@ export const NavBar = () => {
     if(navigator.geolocation){
       navigator.geolocation.getCurrentPosition(async(position)=>{
         const { latitude,longitude } = position.coords;
+        
         try {
-          const request = await axios.get(`https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}`);
+          const request = await axios.get(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`);
           const response = await request.data;
           console.log("response:",response);
           
@@ -22,6 +23,9 @@ export const NavBar = () => {
         }
         
       });
+    }
+    else{
+      console.log('no es compatible');
     }
   }
 
