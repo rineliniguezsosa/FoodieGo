@@ -12,6 +12,7 @@
 - [Requirements](#requirements)
 - [Install](#install)
 - [Deployment](#deployment)
+- [Useful resources](#useful-resources)
 
 ## Collaborators
 
@@ -64,3 +65,7 @@ To start the development server and see the application in action, run:
 ```bash
 npm run dev
 ```
+
+### Useful resources
+
+- [Geolocation api using ReactJS](https://dev.to/choiruladamm/how-to-use-geolocation-api-using-reactjs-ndk) - This resource helped me to obtain the coordinates of my location
