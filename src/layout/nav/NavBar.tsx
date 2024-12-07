@@ -3,12 +3,30 @@ import LocationIcon from '../../assets/basic-icons/localization-icon.svg';
 import { ShoopingBadge } from '../../components';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useState,useEffect } from 'react';
+import axios from 'axios';
 
 export const NavBar = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
+  const getUserLocation = () =>{
+    if(navigator.geolocation){
+      navigator.geolocation.getCurrentPosition(async(position)=>{
+        const { latitude,longitude } = position.coords;
+        try {
+          const request = await axios.get(`https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}`);
+          const response = await request.data;
+          console.log("response:",response);
+          
+        } catch (error) {
+          console.log("error:",error);
+        }
+        
+      });
+    }
+  }
+
   useEffect(() => {
-    
+    getUserLocation()
   }, [])
   
   return (
