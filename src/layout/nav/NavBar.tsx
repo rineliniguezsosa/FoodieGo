@@ -44,7 +44,7 @@ export const NavBar = () => {
             <h1>Foodie Go</h1>
           </div>
 
-          <div>
+          <div className='flex'>
             <img className='text-green' src={LocationIcon} alt="location-icon" />
             {Locationdata ? Locationdata.map(item => (<span key={item.place_id}>{item.display_name.substring(0,8)+"..."}</span>)) : ''}
           </div>
