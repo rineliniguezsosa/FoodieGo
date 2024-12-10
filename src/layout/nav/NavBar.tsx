@@ -8,7 +8,7 @@ import { Place } from '../../types'
 
 export const NavBar = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-  const [Locationdata, setLocationdata] = useState<[] | Place>([])
+  const [Locationdata, setLocationdata] = useState<[] | Place[]>([])
 
   const getUserLocation = () =>{
     if(navigator.geolocation){
@@ -19,6 +19,7 @@ export const NavBar = () => {
           const request = await axios.get(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`);
           const response = await request.data;
           console.log("response:",response);
+          setLocationdata([response]);
           
         } catch (error) {
           console.log("error:",error);
@@ -30,7 +31,8 @@ export const NavBar = () => {
       console.log('no es compatible');
     }
   }
-
+  console.log("Locationdata: ",Locationdata);
+  
   useEffect(() => {
     getUserLocation()
   }, [])
@@ -44,6 +46,7 @@ export const NavBar = () => {
 
           <div>
             <img className='text-green' src={LocationIcon} alt="location-icon" />
+            {Locationdata ? Locationdata.map(item => (<span key={item.place_id}>{item.display_name.substring(0,8)+"..."}</span>)) : ''}
           </div>
 
           <div>
