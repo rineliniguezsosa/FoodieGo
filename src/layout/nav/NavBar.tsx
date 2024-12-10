@@ -4,9 +4,11 @@ import { ShoopingBadge } from '../../components';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useState,useEffect } from 'react';
 import axios from 'axios';
+import { Place } from '../../types'
 
 export const NavBar = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const [Locationdata, setLocationdata] = useState<[] | Place>([])
 
   const getUserLocation = () =>{
     if(navigator.geolocation){
