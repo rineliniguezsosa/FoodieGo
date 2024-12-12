@@ -63,6 +63,11 @@ export const NavBar = () => {
             anchor='left'
             open={isDrawerOpen}
             onClose={()=> setIsDrawerOpen(false)}
+            PaperProps={{
+              sx:{
+                width:'70%'
+              }
+            }}
           >
             <div>
               <span>Hola</span>
